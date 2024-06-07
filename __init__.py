@@ -79,6 +79,8 @@ def enregistrer_client():
 
 @app.route('/fiche_nom/', methods=['GET'])
 def recherche_par_nom():
+    conn = sqlite3.connect('database.db')
+    cursor = conn.cursor()
     nom_client = request.args.get('nom')
     if not nom_client:
         return jsonify({'error': 'Le nom du client est requis'}), 400
