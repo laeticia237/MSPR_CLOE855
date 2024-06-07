@@ -85,7 +85,7 @@ def recherche_par_nom():
     if not nom_client:
         return jsonify({'error': 'Le nom du client est requis'}), 400
     
-    client = Client.query.filter_by(nom=nom_client).first()
+    client = clients.query.filter_by(nom=nom_client).first()
     if client:
         return jsonify({
             'id': client.id,
