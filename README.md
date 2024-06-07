@@ -16,7 +16,7 @@ Large programme mais tout à fait accessible et ne nécessitant pas de base tech
 Séquence 1 : GitHUB
 -------------------------------------------------------------------------------------------------------
 Objectif : Création d'un Repository GitHUB pour travailler avec son projet  
-Difficulté : Très facile (~10 minutes)
+Difficulté : Très facile 
 -------------------------------------------------------------------------------------------------------
 GitHUB est une plateforme en ligne utilisée pour stocker le code de son programme.
 GitHUB est organisé en "Repository", c'est à dire en répertoire (contenant lui même des sous répertoires et des fichiers). Chaque Repository sera indépendant les un des autres. Un Repository doit être vu comme un projet unique (1 Repository = 1 Projet). GitHUB est une plateforme très utilisée par les informaticiens.
@@ -39,7 +39,7 @@ Vous avez appris lors de cette séquence à créer des Repository pour stocker e
 Séquence 2 : Création d'un hébergement en ligne
 ---------------------------------------------------
 Objectif : Créer un hébergement sur Alawaysdata  
-Difficulté : Faible (~15 minutes)
+Difficulté : Faible 
 ---------------------------------------------------
 
 Rendez-vous sur **https://www.alwaysdata.com/fr/**  
