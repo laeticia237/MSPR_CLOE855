@@ -77,24 +77,18 @@ def enregistrer_client():
     conn.close()
     return redirect('/consultation/')  # Rediriger vers la page d'accueil après l'enregistrement
 
-@app.route('/fiche_nom/')
+@app.route('/fiche_nom/<int:get_nom>')
 def recherche_par_nom():
-    nom_client = request.args.get('nom')
-    if not nom_client:
-        return jsonify({'error': 'Le nom du client est requis'}), 400
-    
     conn = sqlite3.connect('database.db')
     cursor = conn.cursor()
-    cursor.execute('SELECT * FROM clients WHERE nom = ?', (nom_client,))
-    client = cursor.fetchone()
-    conn.close()
-
+    cursor.execute('SELECT nom FROM clients WHERE nom = ?', (get_nom,))
+    client = clients.query.filter_by(nom=nom_client).first()
     if client:
         return jsonify({
-            'id': client[0],      
-            'nom': client[1],     
-            'prenom': client[2],  
-            'adresse': client[3]  
+            'id': client.id,
+            'nom': client.nom,
+            'prenom': client.prenom,
+            'adresse': client.adresse
         })
     else:
         return jsonify({'error': 'Client non trouvé'}), 404
